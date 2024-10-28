@@ -1,0 +1,626 @@
+<html>
+
+<head>
+    <style>
+        html {
+            font-family: Helvetica, sans-serif
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fff
+        }
+
+        table {
+            margin: 0 auto 1rem;
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        td,
+        th {
+            min-width: 65px;
+            width: 65px;
+            height: 36px;
+            padding: 0;
+            border: 1px solid #f0f0f0;
+            margin-bottom: 0;
+            font-size: .75rem;
+            line-height: 36px;
+            vertical-align: middle;
+            text-align: center
+        }
+
+        .cell-atkdef {
+            font-size: .625rem;
+            font-weight: 400;
+            line-height: 1.2
+        }
+
+        .type-icon {
+            border-radius: 4px;
+            border: 1px solid rgba(0, 0, 0, .2);
+            color: #fff;
+            font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+            text-transform: uppercase
+        }
+
+        .type-normal {
+            background-color: #aa9
+        }
+
+        .type-fire {
+            background-color: #f42
+        }
+
+        .type-water {
+            background-color: #39f
+        }
+
+        .type-electric {
+            background-color: #fc3
+        }
+
+        .type-grass {
+            background-color: #7c5
+        }
+
+        .type-ice {
+            background-color: #6cf
+        }
+
+        .type-fighting {
+            background-color: #b54
+        }
+
+        .type-poison {
+            background-color: #a59
+        }
+
+        .type-ground {
+            background-color: #db5
+        }
+
+        .type-flying {
+            background-color: #89f
+        }
+
+        .type-psychic {
+            background-color: #f59
+        }
+
+        .type-bug {
+            background-color: #ab2
+        }
+
+        .type-rock {
+            background-color: #ba6
+        }
+
+        .type-ghost {
+            background-color: #66b
+        }
+
+        .type-dragon {
+            background-color: #76e
+        }
+
+        .type-dark {
+            background-color: #754
+        }
+
+        .type-steel {
+            background-color: #aab
+        }
+
+        .type-fairy {
+            background-color: #e9e
+        }
+
+        .type-fx-cell {
+            color: #ffdd57;
+            font-size: .75rem
+        }
+
+        .type-fx-0 {
+            background-color: #2e3436
+        }
+
+        .type-fx-50 {
+            background-color: #a40000;
+            font-size: .875rem
+        }
+
+        .type-fx-100 {
+            background-color: #fff
+        }
+
+        .type-fx-200 {
+            background-color: #4e9a06
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th class="cell-atkdef">DEFENSE&nbsp;→<br>ATTACK&nbsp;↴</th>
+                <th>
+                    <p class="type-icon type-normal">Normal</p>
+                </th>
+                <th>
+                    <p class="type-icon type-fire">Fire</p>
+                </th>
+                <th>
+                    <p class="type-icon type-water">Water</p>
+                </th>
+                <th>
+                    <p class="type-icon type-electric">Electric</p>
+                </th>
+                <th>
+                    <p class="type-icon type-grass">Grass</p>
+                </th>
+                <th>
+                    <p class="type-icon type-ice">Ice</p>
+                </th>
+                <th>
+                    <p class="type-icon type-fighting">Fighting</p>
+                </th>
+                <th>
+                    <p class="type-icon type-poison">Poison</p>
+                </th>
+                <th>
+                    <p class="type-icon type-ground">Ground</p>
+                </th>
+                <th>
+                    <p class="type-icon type-flying">Flying</p>
+                </th>
+                <th>
+                    <p class="type-icon type-psychic">Psychic</p>
+                </th>
+                <th>
+                    <p class="type-icon type-bug">Bug</p>
+                </th>
+                <th>
+                    <p class="type-icon type-rock">Rock</p>
+                </th>
+                <th>
+                    <p class="type-icon type-ghost">Ghost</p>
+                </th>
+                <th>
+                    <p class="type-icon type-dragon">Dragon</p>
+                </th>
+                <th>
+                    <p class="type-icon type-dark">Dark</p>
+                </th>
+                <th>
+                    <p class="type-icon type-steel">Steel</p>
+                </th>
+                <th>
+                    <p class="type-icon type-fairy">Fairy</p>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>
+                    <p class="type-icon type-normal">Normal</p>
+                </th>
+                <td class="type-fx-cell type-fx-100" title="Normal â†’ Normal"></td>
+                <td class="type-fx-cell type-fx-100" title="Normal â†’ Fire"></td>
+                <td class="type-fx-cell type-fx-100" title="Normal â†’ Water"></td>
+                <td class="type-fx-cell type-fx-100" title="Normal â†’ Electric"></td>
+                <td class="type-fx-cell type-fx-100" title="Normal â†’ Grass"></td>
+                <td class="type-fx-cell type-fx-100" title="Normal â†’ Ice"></td>
+                <td class="type-fx-cell type-fx-100" title="Normal â†’ Fighting"></td>
+                <td class="type-fx-cell type-fx-100" title="Normal â†’ Poison"></td>
+                <td class="type-fx-cell type-fx-100" title="Normal â†’ Ground"></td>
+                <td class="type-fx-cell type-fx-100" title="Normal â†’ Flying"></td>
+                <td class="type-fx-cell type-fx-100" title="Normal â†’ Psychic"></td>
+                <td class="type-fx-cell type-fx-100" title="Normal â†’ Bug"></td>
+                <td class="type-fx-cell type-fx-50" title="Normal â†’ Rock">½</td>
+                <td class="type-fx-cell type-fx-0" title="Normal â†’ Ghost">0</td>
+                <td class="type-fx-cell type-fx-100" title="Normal â†’ Dragon"></td>
+                <td class="type-fx-cell type-fx-100" title="Normal â†’ Dark"></td>
+                <td class="type-fx-cell type-fx-50" title="Normal â†’ Steel">½</td>
+                <td class="type-fx-cell type-fx-100" title="Normal â†’ Fairy"></td>
+            </tr>
+            <tr>
+                <th>
+                    <p class="type-icon type-fire">Fire</p>
+                </th>
+                <td class="type-fx-cell type-fx-100" title="Fire â†’ Normal"></td>
+                <td class="type-fx-cell type-fx-50" title="Fire â†’ Fire">½</td>
+                <td class="type-fx-cell type-fx-50" title="Fire â†’ Water">½</td>
+                <td class="type-fx-cell type-fx-100" title="Fire â†’ Electric"></td>
+                <td class="type-fx-cell type-fx-200" title="Fire â†’ Grass">2</td>
+                <td class="type-fx-cell type-fx-200" title="Fire â†’ Ice">2</td>
+                <td class="type-fx-cell type-fx-100" title="Fire â†’ Fighting"></td>
+                <td class="type-fx-cell type-fx-100" title="Fire â†’ Poison"></td>
+                <td class="type-fx-cell type-fx-100" title="Fire â†’ Ground"></td>
+                <td class="type-fx-cell type-fx-100" title="Fire â†’ Flying"></td>
+                <td class="type-fx-cell type-fx-100" title="Fire â†’ Psychic"></td>
+                <td class="type-fx-cell type-fx-200" title="Fire â†’ Bug">2</td>
+                <td class="type-fx-cell type-fx-50" title="Fire â†’ Rock">½</td>
+                <td class="type-fx-cell type-fx-100" title="Fire â†’ Ghost"></td>
+                <td class="type-fx-cell type-fx-50" title="Fire â†’ Dragon">½</td>
+                <td class="type-fx-cell type-fx-100" title="Fire â†’ Dark"></td>
+                <td class="type-fx-cell type-fx-200" title="Fire â†’ Steel">2</td>
+                <td class="type-fx-cell type-fx-100" title="Fire â†’ Fairy"></td>
+            </tr>
+            <tr>
+                <th>
+                    <p class="type-icon type-water">Water</p>
+                </th>
+                <td class="type-fx-cell type-fx-100" title="Water â†’ Normal"></td>
+                <td class="type-fx-cell type-fx-200" title="Water â†’ Fire">2</td>
+                <td class="type-fx-cell type-fx-50" title="Water â†’ Water">½</td>
+                <td class="type-fx-cell type-fx-100" title="Water â†’ Electric"></td>
+                <td class="type-fx-cell type-fx-50" title="Water â†’ Grass">½</td>
+                <td class="type-fx-cell type-fx-100" title="Water â†’ Ice"></td>
+                <td class="type-fx-cell type-fx-100" title="Water â†’ Fighting"></td>
+                <td class="type-fx-cell type-fx-100" title="Water â†’ Poison"></td>
+                <td class="type-fx-cell type-fx-200" title="Water â†’ Ground">2</td>
+                <td class="type-fx-cell type-fx-100" title="Water â†’ Flying"></td>
+                <td class="type-fx-cell type-fx-100" title="Water â†’ Psychic"></td>
+                <td class="type-fx-cell type-fx-100" title="Water â†’ Bug"></td>
+                <td class="type-fx-cell type-fx-200" title="Water â†’ Rock">2</td>
+                <td class="type-fx-cell type-fx-100" title="Water â†’ Ghost"></td>
+                <td class="type-fx-cell type-fx-50" title="Water â†’ Dragon">½</td>
+                <td class="type-fx-cell type-fx-100" title="Water â†’ Dark"></td>
+                <td class="type-fx-cell type-fx-100" title="Water â†’ Steel"></td>
+                <td class="type-fx-cell type-fx-100" title="Water â†’ Fairy"></td>
+            </tr>
+            <tr>
+                <th>
+                    <p class="type-icon type-electric">Electric</p>
+                </th>
+                <td class="type-fx-cell type-fx-100" title="Electric â†’ Normal"></td>
+                <td class="type-fx-cell type-fx-100" title="Electric â†’ Fire"></td>
+                <td class="type-fx-cell type-fx-200" title="Electric â†’ Water">2</td>
+                <td class="type-fx-cell type-fx-50" title="Electric â†’ Electric">½</td>
+                <td class="type-fx-cell type-fx-50" title="Electric â†’ Grass">½</td>
+                <td class="type-fx-cell type-fx-100" title="Electric â†’ Ice"></td>
+                <td class="type-fx-cell type-fx-100" title="Electric â†’ Fighting"></td>
+                <td class="type-fx-cell type-fx-100" title="Electric â†’ Poison"></td>
+                <td class="type-fx-cell type-fx-0" title="Electric â†’ Ground">0</td>
+                <td class="type-fx-cell type-fx-200" title="Electric â†’ Flying">2</td>
+                <td class="type-fx-cell type-fx-100" title="Electric â†’ Psychic"></td>
+                <td class="type-fx-cell type-fx-100" title="Electric â†’ Bug"></td>
+                <td class="type-fx-cell type-fx-100" title="Electric â†’ Rock"></td>
+                <td class="type-fx-cell type-fx-100" title="Electric â†’ Ghost"></td>
+                <td class="type-fx-cell type-fx-50" title="Electric â†’ Dragon">½</td>
+                <td class="type-fx-cell type-fx-100" title="Electric â†’ Dark"></td>
+                <td class="type-fx-cell type-fx-100" title="Electric â†’ Steel"></td>
+                <td class="type-fx-cell type-fx-100" title="Electric â†’ Fairy"></td>
+            </tr>
+            <tr>
+                <th>
+                    <p class="type-icon type-grass">Grass</p>
+                </th>
+                <td class="type-fx-cell type-fx-100" title="Grass â†’ Normal"></td>
+                <td class="type-fx-cell type-fx-50" title="Grass â†’ Fire">½</td>
+                <td class="type-fx-cell type-fx-200" title="Grass â†’ Water">2</td>
+                <td class="type-fx-cell type-fx-100" title="Grass â†’ Electric"></td>
+                <td class="type-fx-cell type-fx-50" title="Grass â†’ Grass">½</td>
+                <td class="type-fx-cell type-fx-100" title="Grass â†’ Ice"></td>
+                <td class="type-fx-cell type-fx-100" title="Grass â†’ Fighting"></td>
+                <td class="type-fx-cell type-fx-50" title="Grass â†’ Poison">½</td>
+                <td class="type-fx-cell type-fx-200" title="Grass â†’ Ground">2</td>
+                <td class="type-fx-cell type-fx-50" title="Grass â†’ Flying">½</td>
+                <td class="type-fx-cell type-fx-100" title="Grass â†’ Psychic"></td>
+                <td class="type-fx-cell type-fx-50" title="Grass â†’ Bug">½</td>
+                <td class="type-fx-cell type-fx-200" title="Grass â†’ Rock">2</td>
+                <td class="type-fx-cell type-fx-100" title="Grass â†’ Ghost"></td>
+                <td class="type-fx-cell type-fx-50" title="Grass â†’ Dragon">½</td>
+                <td class="type-fx-cell type-fx-100" title="Grass â†’ Dark"></td>
+                <td class="type-fx-cell type-fx-50" title="Grass â†’ Steel">½</td>
+                <td class="type-fx-cell type-fx-100" title="Grass â†’ Fairy"></td>
+            </tr>
+            <tr>
+                <th>
+                    <p class="type-icon type-ice">Ice</p>
+                </th>
+                <td class="type-fx-cell type-fx-100" title="Ice â†’ Normal"></td>
+                <td class="type-fx-cell type-fx-50" title="Ice â†’ Fire">½</td>
+                <td class="type-fx-cell type-fx-50" title="Ice â†’ Water">½</td>
+                <td class="type-fx-cell type-fx-100" title="Ice â†’ Electric"></td>
+                <td class="type-fx-cell type-fx-200" title="Ice â†’ Grass">2</td>
+                <td class="type-fx-cell type-fx-50" title="Ice â†’ Ice">½</td>
+                <td class="type-fx-cell type-fx-100" title="Ice â†’ Fighting"></td>
+                <td class="type-fx-cell type-fx-100" title="Ice â†’ Poison"></td>
+                <td class="type-fx-cell type-fx-200" title="Ice â†’ Ground">2</td>
+                <td class="type-fx-cell type-fx-200" title="Ice â†’ Flying">2</td>
+                <td class="type-fx-cell type-fx-100" title="Ice â†’ Psychic"></td>
+                <td class="type-fx-cell type-fx-100" title="Ice â†’ Bug"></td>
+                <td class="type-fx-cell type-fx-100" title="Ice â†’ Rock"></td>
+                <td class="type-fx-cell type-fx-100" title="Ice â†’ Ghost"></td>
+                <td class="type-fx-cell type-fx-200" title="Ice â†’ Dragon">2</td>
+                <td class="type-fx-cell type-fx-100" title="Ice â†’ Dark"></td>
+                <td class="type-fx-cell type-fx-50" title="Ice â†’ Steel">½</td>
+                <td class="type-fx-cell type-fx-100" title="Ice â†’ Fairy"></td>
+            </tr>
+            <tr>
+                <th>
+                    <p class="type-icon type-fighting">Fighting</p>
+                </th>
+                <td class="type-fx-cell type-fx-200" title="Fighting â†’ Normal">2</td>
+                <td class="type-fx-cell type-fx-100" title="Fighting â†’ Fire"></td>
+                <td class="type-fx-cell type-fx-100" title="Fighting â†’ Water"></td>
+                <td class="type-fx-cell type-fx-100" title="Fighting â†’ Electric"></td>
+                <td class="type-fx-cell type-fx-100" title="Fighting â†’ Grass"></td>
+                <td class="type-fx-cell type-fx-200" title="Fighting â†’ Ice">2</td>
+                <td class="type-fx-cell type-fx-100" title="Fighting â†’ Fighting"></td>
+                <td class="type-fx-cell type-fx-50" title="Fighting â†’ Poison">½</td>
+                <td class="type-fx-cell type-fx-100" title="Fighting â†’ Ground"></td>
+                <td class="type-fx-cell type-fx-50" title="Fighting â†’ Flying">½</td>
+                <td class="type-fx-cell type-fx-50" title="Fighting â†’ Psychic">½</td>
+                <td class="type-fx-cell type-fx-50" title="Fighting â†’ Bug">½</td>
+                <td class="type-fx-cell type-fx-200" title="Fighting â†’ Rock">2</td>
+                <td class="type-fx-cell type-fx-0" title="Fighting â†’ Ghost">0</td>
+                <td class="type-fx-cell type-fx-100" title="Fighting â†’ Dragon"></td>
+                <td class="type-fx-cell type-fx-200" title="Fighting â†’ Dark">2</td>
+                <td class="type-fx-cell type-fx-200" title="Fighting â†’ Steel">2</td>
+                <td class="type-fx-cell type-fx-50" title="Fighting â†’ Fairy">½</td>
+            </tr>
+            <tr>
+                <th>
+                    <p class="type-icon type-poison">Poison</p>
+                </th>
+                <td class="type-fx-cell type-fx-100" title="Poison â†’ Normal"></td>
+                <td class="type-fx-cell type-fx-100" title="Poison â†’ Fire"></td>
+                <td class="type-fx-cell type-fx-100" title="Poison â†’ Water"></td>
+                <td class="type-fx-cell type-fx-100" title="Poison â†’ Electric"></td>
+                <td class="type-fx-cell type-fx-200" title="Poison â†’ Grass">2</td>
+                <td class="type-fx-cell type-fx-100" title="Poison â†’ Ice"></td>
+                <td class="type-fx-cell type-fx-100" title="Poison â†’ Fighting"></td>
+                <td class="type-fx-cell type-fx-50" title="Poison â†’ Poison">½</td>
+                <td class="type-fx-cell type-fx-50" title="Poison â†’ Ground">½</td>
+                <td class="type-fx-cell type-fx-100" title="Poison â†’ Flying"></td>
+                <td class="type-fx-cell type-fx-100" title="Poison â†’ Psychic"></td>
+                <td class="type-fx-cell type-fx-100" title="Poison â†’ Bug"></td>
+                <td class="type-fx-cell type-fx-50" title="Poison â†’ Rock">½</td>
+                <td class="type-fx-cell type-fx-50" title="Poison â†’ Ghost">½</td>
+                <td class="type-fx-cell type-fx-100" title="Poison â†’ Dragon"></td>
+                <td class="type-fx-cell type-fx-100" title="Poison â†’ Dark"></td>
+                <td class="type-fx-cell type-fx-0" title="Poison â†’ Steel">0</td>
+                <td class="type-fx-cell type-fx-200" title="Poison â†’ Fairy">2</td>
+            </tr>
+            <tr>
+                <th>
+                    <p class="type-icon type-ground">Ground</p>
+                </th>
+                <td class="type-fx-cell type-fx-100" title="Ground â†’ Normal"></td>
+                <td class="type-fx-cell type-fx-200" title="Ground â†’ Fire">2</td>
+                <td class="type-fx-cell type-fx-100" title="Ground â†’ Water"></td>
+                <td class="type-fx-cell type-fx-200" title="Ground â†’ Electric">2</td>
+                <td class="type-fx-cell type-fx-50" title="Ground â†’ Grass">½</td>
+                <td class="type-fx-cell type-fx-100" title="Ground â†’ Ice"></td>
+                <td class="type-fx-cell type-fx-100" title="Ground â†’ Fighting"></td>
+                <td class="type-fx-cell type-fx-200" title="Ground â†’ Poison">2</td>
+                <td class="type-fx-cell type-fx-100" title="Ground â†’ Ground"></td>
+                <td class="type-fx-cell type-fx-0" title="Ground â†’ Flying">0</td>
+                <td class="type-fx-cell type-fx-100" title="Ground â†’ Psychic"></td>
+                <td class="type-fx-cell type-fx-50" title="Ground â†’ Bug">½</td>
+                <td class="type-fx-cell type-fx-200" title="Ground â†’ Rock">2</td>
+                <td class="type-fx-cell type-fx-100" title="Ground â†’ Ghost"></td>
+                <td class="type-fx-cell type-fx-100" title="Ground â†’ Dragon"></td>
+                <td class="type-fx-cell type-fx-100" title="Ground â†’ Dark"></td>
+                <td class="type-fx-cell type-fx-200" title="Ground â†’ Steel">2</td>
+                <td class="type-fx-cell type-fx-100" title="Ground â†’ Fairy"></td>
+            </tr>
+            <tr>
+                <th>
+                    <p class="type-icon type-flying">Flying</p>
+                </th>
+                <td class="type-fx-cell type-fx-100" title="Flying â†’ Normal"></td>
+                <td class="type-fx-cell type-fx-100" title="Flying â†’ Fire"></td>
+                <td class="type-fx-cell type-fx-100" title="Flying â†’ Water"></td>
+                <td class="type-fx-cell type-fx-50" title="Flying â†’ Electric">½</td>
+                <td class="type-fx-cell type-fx-200" title="Flying â†’ Grass">2</td>
+                <td class="type-fx-cell type-fx-100" title="Flying â†’ Ice"></td>
+                <td class="type-fx-cell type-fx-200" title="Flying â†’ Fighting">2</td>
+                <td class="type-fx-cell type-fx-100" title="Flying â†’ Poison"></td>
+                <td class="type-fx-cell type-fx-100" title="Flying â†’ Ground"></td>
+                <td class="type-fx-cell type-fx-100" title="Flying â†’ Flying"></td>
+                <td class="type-fx-cell type-fx-100" title="Flying â†’ Psychic"></td>
+                <td class="type-fx-cell type-fx-200" title="Flying â†’ Bug">2</td>
+                <td class="type-fx-cell type-fx-50" title="Flying â†’ Rock">½</td>
+                <td class="type-fx-cell type-fx-100" title="Flying â†’ Ghost"></td>
+                <td class="type-fx-cell type-fx-100" title="Flying â†’ Dragon"></td>
+                <td class="type-fx-cell type-fx-100" title="Flying â†’ Dark"></td>
+                <td class="type-fx-cell type-fx-50" title="Flying â†’ Steel">½</td>
+                <td class="type-fx-cell type-fx-100" title="Flying â†’ Fairy"></td>
+            </tr>
+            <tr>
+                <th>
+                    <p class="type-icon type-psychic">Psychic</p>
+                </th>
+                <td class="type-fx-cell type-fx-100" title="Psychic â†’ Normal"></td>
+                <td class="type-fx-cell type-fx-100" title="Psychic â†’ Fire"></td>
+                <td class="type-fx-cell type-fx-100" title="Psychic â†’ Water"></td>
+                <td class="type-fx-cell type-fx-100" title="Psychic â†’ Electric"></td>
+                <td class="type-fx-cell type-fx-100" title="Psychic â†’ Grass"></td>
+                <td class="type-fx-cell type-fx-100" title="Psychic â†’ Ice"></td>
+                <td class="type-fx-cell type-fx-200" title="Psychic â†’ Fighting">2</td>
+                <td class="type-fx-cell type-fx-200" title="Psychic â†’ Poison">2</td>
+                <td class="type-fx-cell type-fx-100" title="Psychic â†’ Ground"></td>
+                <td class="type-fx-cell type-fx-100" title="Psychic â†’ Flying"></td>
+                <td class="type-fx-cell type-fx-50" title="Psychic â†’ Psychic">½</td>
+                <td class="type-fx-cell type-fx-100" title="Psychic â†’ Bug"></td>
+                <td class="type-fx-cell type-fx-100" title="Psychic â†’ Rock"></td>
+                <td class="type-fx-cell type-fx-100" title="Psychic â†’ Ghost"></td>
+                <td class="type-fx-cell type-fx-100" title="Psychic â†’ Dragon"></td>
+                <td class="type-fx-cell type-fx-0" title="Psychic â†’ Dark">0</td>
+                <td class="type-fx-cell type-fx-50" title="Psychic â†’ Steel">½</td>
+                <td class="type-fx-cell type-fx-100" title="Psychic â†’ Fairy"></td>
+            </tr>
+            <tr>
+                <th>
+                    <p class="type-icon type-bug">Bug</p>
+                </th>
+                <td class="type-fx-cell type-fx-100" title="Bug â†’ Normal"></td>
+                <td class="type-fx-cell type-fx-50" title="Bug â†’ Fire">½</td>
+                <td class="type-fx-cell type-fx-100" title="Bug â†’ Water"></td>
+                <td class="type-fx-cell type-fx-100" title="Bug â†’ Electric"></td>
+                <td class="type-fx-cell type-fx-200" title="Bug â†’ Grass">2</td>
+                <td class="type-fx-cell type-fx-100" title="Bug â†’ Ice"></td>
+                <td class="type-fx-cell type-fx-50" title="Bug â†’ Fighting">½</td>
+                <td class="type-fx-cell type-fx-50" title="Bug â†’ Poison">½</td>
+                <td class="type-fx-cell type-fx-100" title="Bug â†’ Ground"></td>
+                <td class="type-fx-cell type-fx-50" title="Bug â†’ Flying">½</td>
+                <td class="type-fx-cell type-fx-200" title="Bug â†’ Psychic">2</td>
+                <td class="type-fx-cell type-fx-100" title="Bug â†’ Bug"></td>
+                <td class="type-fx-cell type-fx-100" title="Bug â†’ Rock"></td>
+                <td class="type-fx-cell type-fx-50" title="Bug â†’ Ghost">½</td>
+                <td class="type-fx-cell type-fx-100" title="Bug â†’ Dragon"></td>
+                <td class="type-fx-cell type-fx-200" title="Bug â†’ Dark">2</td>
+                <td class="type-fx-cell type-fx-50" title="Bug â†’ Steel">½</td>
+                <td class="type-fx-cell type-fx-50" title="Bug â†’ Fairy">½</td>
+            </tr>
+            <tr>
+                <th>
+                    <p class="type-icon type-rock">Rock</p>
+                </th>
+                <td class="type-fx-cell type-fx-100" title="Rock â†’ Normal"></td>
+                <td class="type-fx-cell type-fx-200" title="Rock â†’ Fire">2</td>
+                <td class="type-fx-cell type-fx-100" title="Rock â†’ Water"></td>
+                <td class="type-fx-cell type-fx-100" title="Rock â†’ Electric"></td>
+                <td class="type-fx-cell type-fx-100" title="Rock â†’ Grass"></td>
+                <td class="type-fx-cell type-fx-200" title="Rock â†’ Ice">2</td>
+                <td class="type-fx-cell type-fx-50" title="Rock â†’ Fighting">½</td>
+                <td class="type-fx-cell type-fx-100" title="Rock â†’ Poison"></td>
+                <td class="type-fx-cell type-fx-50" title="Rock â†’ Ground">½</td>
+                <td class="type-fx-cell type-fx-200" title="Rock â†’ Flying">2</td>
+                <td class="type-fx-cell type-fx-100" title="Rock â†’ Psychic"></td>
+                <td class="type-fx-cell type-fx-200" title="Rock â†’ Bug">2</td>
+                <td class="type-fx-cell type-fx-100" title="Rock â†’ Rock"></td>
+                <td class="type-fx-cell type-fx-100" title="Rock â†’ Ghost"></td>
+                <td class="type-fx-cell type-fx-100" title="Rock â†’ Dragon"></td>
+                <td class="type-fx-cell type-fx-100" title="Rock â†’ Dark"></td>
+                <td class="type-fx-cell type-fx-50" title="Rock â†’ Steel">½</td>
+                <td class="type-fx-cell type-fx-100" title="Rock â†’ Fairy"></td>
+            </tr>
+            <tr>
+                <th>
+                    <p class="type-icon type-ghost">Ghost</p>
+                </th>
+                <td class="type-fx-cell type-fx-0" title="Ghost â†’ Normal=no effect">0</td>
+                <td class="type-fx-cell type-fx-100" title="Ghost â†’ Fire"></td>
+                <td class="type-fx-cell type-fx-100" title="Ghost â†’ Water"></td>
+                <td class="type-fx-cell type-fx-100" title="Ghost â†’ Electric"></td>
+                <td class="type-fx-cell type-fx-100" title="Ghost â†’ Grass"></td>
+                <td class="type-fx-cell type-fx-100" title="Ghost â†’ Ice"></td>
+                <td class="type-fx-cell type-fx-100" title="Ghost â†’ Fighting"></td>
+                <td class="type-fx-cell type-fx-100" title="Ghost â†’ Poison"></td>
+                <td class="type-fx-cell type-fx-100" title="Ghost â†’ Ground"></td>
+                <td class="type-fx-cell type-fx-100" title="Ghost â†’ Flying"></td>
+                <td class="type-fx-cell type-fx-200" title="Ghost â†’ Psychic">2</td>
+                <td class="type-fx-cell type-fx-100" title="Ghost â†’ Bug"></td>
+                <td class="type-fx-cell type-fx-100" title="Ghost â†’ Rock"></td>
+                <td class="type-fx-cell type-fx-200" title="Ghost â†’ Ghost">2</td>
+                <td class="type-fx-cell type-fx-100" title="Ghost â†’ Dragon"></td>
+                <td class="type-fx-cell type-fx-50" title="Ghost â†’ Dark">½</td>
+                <td class="type-fx-cell type-fx-100" title="Ghost â†’ Steel"></td>
+                <td class="type-fx-cell type-fx-100" title="Ghost â†’ Fairy"></td>
+            </tr>
+            <tr>
+                <th>
+                    <p class="type-icon type-dragon">Dragon</p>
+                </th>
+                <td class="type-fx-cell type-fx-100" title="Dragon â†’ Normal"></td>
+                <td class="type-fx-cell type-fx-100" title="Dragon â†’ Fire"></td>
+                <td class="type-fx-cell type-fx-100" title="Dragon â†’ Water"></td>
+                <td class="type-fx-cell type-fx-100" title="Dragon â†’ Electric"></td>
+                <td class="type-fx-cell type-fx-100" title="Dragon â†’ Grass"></td>
+                <td class="type-fx-cell type-fx-100" title="Dragon â†’ Ice"></td>
+                <td class="type-fx-cell type-fx-100" title="Dragon â†’ Fighting"></td>
+                <td class="type-fx-cell type-fx-100" title="Dragon â†’ Poison"></td>
+                <td class="type-fx-cell type-fx-100" title="Dragon â†’ Ground"></td>
+                <td class="type-fx-cell type-fx-100" title="Dragon â†’ Flying"></td>
+                <td class="type-fx-cell type-fx-100" title="Dragon â†’ Psychic"></td>
+                <td class="type-fx-cell type-fx-100" title="Dragon â†’ Bug"></td>
+                <td class="type-fx-cell type-fx-100" title="Dragon â†’ Rock"></td>
+                <td class="type-fx-cell type-fx-100" title="Dragon â†’ Ghost"></td>
+                <td class="type-fx-cell type-fx-200" title="Dragon â†’ Dragon">2</td>
+                <td class="type-fx-cell type-fx-100" title="Dragon â†’ Dark"></td>
+                <td class="type-fx-cell type-fx-50" title="Dragon â†’ Steel">½</td>
+                <td class="type-fx-cell type-fx-0" title="Dragon â†’ Fairy">0</td>
+            </tr>
+            <tr>
+                <th>
+                    <p class="type-icon type-dark">Dark</p>
+                </th>
+                <td class="type-fx-cell type-fx-100" title="Dark â†’ Normal"></td>
+                <td class="type-fx-cell type-fx-100" title="Dark â†’ Fire"></td>
+                <td class="type-fx-cell type-fx-100" title="Dark â†’ Water"></td>
+                <td class="type-fx-cell type-fx-100" title="Dark â†’ Electric"></td>
+                <td class="type-fx-cell type-fx-100" title="Dark â†’ Grass"></td>
+                <td class="type-fx-cell type-fx-100" title="Dark â†’ Ice"></td>
+                <td class="type-fx-cell type-fx-50" title="Dark â†’ Fighting">½</td>
+                <td class="type-fx-cell type-fx-100" title="Dark â†’ Poison"></td>
+                <td class="type-fx-cell type-fx-100" title="Dark â†’ Ground"></td>
+                <td class="type-fx-cell type-fx-100" title="Dark â†’ Flying"></td>
+                <td class="type-fx-cell type-fx-200" title="Dark â†’ Psychic">2</td>
+                <td class="type-fx-cell type-fx-100" title="Dark â†’ Bug"></td>
+                <td class="type-fx-cell type-fx-100" title="Dark â†’ Rock"></td>
+                <td class="type-fx-cell type-fx-200" title="Dark â†’ Ghost">2</td>
+                <td class="type-fx-cell type-fx-100" title="Dark â†’ Dragon"></td>
+                <td class="type-fx-cell type-fx-50" title="Dark â†’ Dark">½</td>
+                <td class="type-fx-cell type-fx-100" title="Dark â†’ Steel"></td>
+                <td class="type-fx-cell type-fx-50" title="Dark â†’ Fairy">½</td>
+            </tr>
+            <tr>
+                <th>
+                    <p class="type-icon type-steel">Steel</p>
+                </th>
+                <td class="type-fx-cell type-fx-100" title="Steel â†’ Normal"></td>
+                <td class="type-fx-cell type-fx-50" title="Steel â†’ Fire">½</td>
+                <td class="type-fx-cell type-fx-50" title="Steel â†’ Water">½</td>
+                <td class="type-fx-cell type-fx-50" title="Steel â†’ Electric">½</td>
+                <td class="type-fx-cell type-fx-100" title="Steel â†’ Grass"></td>
+                <td class="type-fx-cell type-fx-200" title="Steel â†’ Ice">2</td>
+                <td class="type-fx-cell type-fx-100" title="Steel â†’ Fighting"></td>
+                <td class="type-fx-cell type-fx-100" title="Steel â†’ Poison"></td>
+                <td class="type-fx-cell type-fx-100" title="Steel â†’ Ground"></td>
+                <td class="type-fx-cell type-fx-100" title="Steel â†’ Flying"></td>
+                <td class="type-fx-cell type-fx-100" title="Steel â†’ Psychic"></td>
+                <td class="type-fx-cell type-fx-100" title="Steel â†’ Bug"></td>
+                <td class="type-fx-cell type-fx-200" title="Steel â†’ Rock">2</td>
+                <td class="type-fx-cell type-fx-100" title="Steel â†’ Ghost"></td>
+                <td class="type-fx-cell type-fx-100" title="Steel â†’ Dragon"></td>
+                <td class="type-fx-cell type-fx-100" title="Steel â†’ Dark"></td>
+                <td class="type-fx-cell type-fx-50" title="Steel â†’ Steel">½</td>
+                <td class="type-fx-cell type-fx-200" title="Steel â†’ Fairy">2</td>
+            </tr>
+            <tr>
+                <th>
+                    <p class="type-icon type-fairy">Fairy</p>
+                </th>
+                <td class="type-fx-cell type-fx-100" title="Fairy â†’ Normal"></td>
+                <td class="type-fx-cell type-fx-50" title="Fairy â†’ Fire">½</td>
+                <td class="type-fx-cell type-fx-100" title="Fairy â†’ Water"></td>
+                <td class="type-fx-cell type-fx-100" title="Fairy â†’ Electric"></td>
+                <td class="type-fx-cell type-fx-100" title="Fairy â†’ Grass"></td>
+                <td class="type-fx-cell type-fx-100" title="Fairy â†’ Ice"></td>
+                <td class="type-fx-cell type-fx-200" title="Fairy â†’ Fighting">2</td>
+                <td class="type-fx-cell type-fx-50" title="Fairy â†’ Poison">½</td>
+                <td class="type-fx-cell type-fx-100" title="Fairy â†’ Ground"></td>
+                <td class="type-fx-cell type-fx-100" title="Fairy â†’ Flying"></td>
+                <td class="type-fx-cell type-fx-100" title="Fairy â†’ Psychic"></td>
+                <td class="type-fx-cell type-fx-100" title="Fairy â†’ Bug"></td>
+                <td class="type-fx-cell type-fx-100" title="Fairy â†’ Rock"></td>
+                <td class="type-fx-cell type-fx-100" title="Fairy â†’ Ghost"></td>
+                <td class="type-fx-cell type-fx-200" title="Fairy â†’ Dragon">2</td>
+                <td class="type-fx-cell type-fx-200" title="Fairy â†’ Dark">2</td>
+                <td class="type-fx-cell type-fx-50" title="Fairy â†’ Steel">½</td>
+                <td class="type-fx-cell type-fx-100" title="Fairy â†’ Fairy"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
